@@ -1,0 +1,87 @@
+.register-content {
+  --background: #FFF1F2; /* Light Blush Pink */
+}
+
+.register-content::part(scroll) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+ion-card-header {
+  text-align: center;
+}
+
+.user-icon {
+  font-size: 60px;
+  color: #FF6B81;
+  margin-bottom: 10px;
+  gap:5px;
+}
+
+ion-card-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #111111;
+}
+
+ion-card-subtitle {
+  color: #666666;
+  margin-top: 5px;
+}
+
+.input-box {
+  margin-top: 16px;
+  --background: #F8F8F8;
+  --border-radius: 12px;
+  --padding-start: 12px;
+}
+
+.input-box ion-icon {
+  color: #FF6B81;
+}
+
+ion-input {
+  color: #111111;
+}
+
+.register-btn {
+  margin-top: 22px;
+  --background: #FF6B81;
+  --color: #FFFFFF;
+  --border-radius: 12px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #111111;
+}
+
+.login-link a {
+  color: #FF6B81;
+  text-decoration: none;
+  font-weight: 600;
+}

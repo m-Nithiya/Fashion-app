@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="goNext()">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="refreshPage()">
+        <ion-icon name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+ 
+    <ion-title class="center-title">
+      My Profile
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <div class="profile-header">
+
+    <img [src]="profileImage" class="profile-image" alt="Profile Image">
+
+    <input
+      #fileInput
+      type="file"
+      accept="image/*"
+      hidden
+      (change)="onFileSelected($event)">
+
+    <ion-button size="small" (click)="fileInput.click()">
+      Choose Profile Photo
+    </ion-button>
+
+  </div>
+
+  <ion-item class="input-box">
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-box">
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-box">
+    <ion-label position="stacked">Age</ion-label>
+    <ion-input type="number" [(ngModel)]="age"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-box">
+    <ion-label position="stacked">Phone Number</ion-label>
+    <ion-input type="tel" [(ngModel)]="phone"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-box">
+    <ion-label position="stacked">DOB</ion-label>
+    <ion-input type="date" [(ngModel)]="dob"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" class="save-btn" (click)="saveProfile()">
+    Save
+  </ion-button>
+
+</ion-content>

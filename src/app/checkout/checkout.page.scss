@@ -1,0 +1,104 @@
+/* Background */
+ion-content {
+  --background: pink;
+}
+
+/* Header */
+ion-toolbar {
+  --background: #ff4d94;
+  --color:#fff;
+}
+
+/* Cards */
+ion-card {
+  margin: 15px;
+  border-radius: 18px;
+  padding: 16px;
+  background: #ffffff;
+}
+
+
+
+/* Card Title */
+ion-card-title {
+  color: #ff4d94;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Input Fields */
+ion-item {
+  --border-color: transparent;   // black line fully remove aagum
+  --background: #f8c9d8;       
+  border-radius: 8px;
+  margin-bottom: 14px;
+  --min-height: 55px;
+}
+
+ion-input,
+ion-textarea {
+  --color: black;
+   --padding-top: 6px !important;
+    --padding-bottom: 6px !important;
+}
+
+/* Radio Buttons */
+ion-radio-group ion-item  {
+  --color: #ff4d94;
+  --color-checked: #ff4d94;
+}
+
+/* Price Section */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4d94;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #ffd6e7;
+  margin: 12px 0;
+}
+
+/* Footer */
+ion-footer {
+  background:#fff;
+  padding: 10px;
+}
+
+/* Place Order Button */
+ion-button {
+  --background:#ff4d94;;
+  --background-activated: #e60073;
+  --border-radius: 14px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+/* Button Shadow */
+ion-button::part(native) {
+  box-shadow: 0 6px 15px rgba(255, 77, 148, 0.35);
+}
+ion-content.checkout-container {
+  --background: pink;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+ion-content.checkout-container ion-card {
+  max-width: 500px;
+  margin: 15px auto;   
+}

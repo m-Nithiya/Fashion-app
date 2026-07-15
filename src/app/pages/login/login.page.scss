@@ -1,0 +1,84 @@
+.login-content {
+  --background: #FFF1F2; /* Light Blush Pink */
+}
+
+.login-content::part(scroll) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+ion-card-header {
+  text-align: center;
+}
+
+.user-icon {
+  font-size: 60px;
+  color: #FF6B81;
+  margin-bottom: 10px;
+}
+
+ion-card-title {
+  color: #111111;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  color: #666666;
+}
+
+.input-box {
+  margin-top: 16px;
+  --background: #F8F8F8;
+  --border-radius: 12px;
+}
+
+.input-box ion-icon {
+  color: #FF6B81;
+}
+
+ion-input {
+  color: #111111;
+}
+
+.login-btn {
+  margin-top: 20px;
+  --background: #FF6B81;
+  --color: #FFFFFF;
+  --border-radius: 12px;
+  height: 50px;
+  font-weight: bold;
+}
+
+.forgot,
+.signup {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.forgot a,
+.signup a {
+  color: #FF6B81;
+  text-decoration: none;
+  font-weight: 600;
+}

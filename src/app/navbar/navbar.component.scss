@@ -1,0 +1,68 @@
+.navbar {
+  --background: #ffffff;
+  --color: #222;
+  padding: 8px 10px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff4081;
+}
+
+ion-button {
+  --color: #222;
+}
+
+ion-icon {
+  font-size: 24px;
+}
+
+.logout-popover {
+  --background: #1f1f1f;
+  --color: #fff;
+}
+.profile-btn{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-transform:none;
+}
+.profile-avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff4f81,#ff7aa5);
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:18px;
+  font-weight:bold;
+}
+.profile-name {
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+.profile-header{
+  background:linear-gradient(135deg,#ff4f81,#ff7aa5);
+  padding:25px;
+  text-align:center;
+  color:white;
+}
+
+.profile-circle{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:white;
+  color:#ff4f81;
+  font-size:28px;
+  font-weight:bold;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+  margin-bottom:12px;
+}

@@ -1,0 +1,57 @@
+<ion-content class="login-content">
+  <div class="login-container">
+
+    <ion-card class="login-card">
+
+      <ion-card-header>
+        <div class="user-icon">
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </div>
+
+        <ion-card-title>Welcome Back</ion-card-title>
+        <ion-card-subtitle>Sign in to continue</ion-card-subtitle>
+      </ion-card-header>
+
+      
+
+      <ion-card-content>
+
+        <ion-item class="input-box">
+  <ion-icon name="mail-outline" slot="start"></ion-icon>
+  <ion-input
+    type="email"
+    placeholder="Email"
+    [(ngModel)]="userName">
+  </ion-input>
+</ion-item>
+
+<ion-item class="input-box">
+  <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+  <ion-input
+    type="password"
+    placeholder="Password"
+    [(ngModel)]="password">
+  </ion-input>
+</ion-item>
+
+        <div class="forgot">
+          <a>Forgot Password?</a>
+        </div>
+
+        <ion-button
+  expand="block"
+  class="login-btn"
+  (click)="login()">
+  SIGN IN
+</ion-button>  
+        <div class="signup">
+          New User?<a routerLink="/register">Create Account</a>
+  </div>
+
+      
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+</ion-content>

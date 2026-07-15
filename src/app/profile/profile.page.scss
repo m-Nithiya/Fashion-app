@@ -1,0 +1,135 @@
+/* ==========================
+   Page Background
+========================== */
+ion-content {
+  --background: #fff7fa;
+}
+
+/* ==========================
+   Header
+========================== */
+ion-toolbar {
+  --background: #ff5c9a;
+  --color: #ffffff;
+}
+
+ion-title {
+  color: #ffffff;
+  left: 50%;
+  transform: translateX(-5%);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ==========================
+   Profile Section
+========================== */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff5c9a;
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(255, 92, 154, 0.25);
+  margin-bottom: 15px;
+}
+
+/* Choose Profile Photo Button */
+.profile-header ion-button {
+  --background: #ff5c9a;
+  --color: #ffffff;
+  --border-radius: 25px;
+  height: 42px;
+  font-weight: bold;
+}
+
+/* ==========================
+   Input Box
+========================== */
+.input-box {
+  width: 450px;
+  max-width: 92%;
+  margin: 14px auto;
+
+  --background: #ffffff;
+  --border-radius: 15px;
+  --padding-start: 12px;
+
+  border: 1px solid #ffd1e2;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(255, 92, 154, 0.08);
+}
+
+/* Labels */
+ion-label {
+  color: #ff5c9a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Input */
+ion-input {
+  color: #333333;
+  font-size: 15px;
+}
+
+/* Save Button */
+.save-btn {
+  width: 450px;
+  max-width: 92%;
+  margin: 30px auto;
+
+  --background: #ff5c9a;
+  --color: #ffffff;
+  --border-radius: 15px;
+
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Button Hover */
+.save-btn:hover,
+.profile-header ion-button:hover {
+  --background: #ff3f86;
+}
+/* Input Box */
+ion-item {
+  --background: #ffffff;
+  --border-radius: 12px;
+  --padding-start: 12px;
+   --inner-border-width: 0;
+  --highlight-height: 0;
+  --border-width: 0;
+
+  margin: 15px auto;
+  width: 450px;
+  max-width: 90%;
+}
+  
+
+/* Input text */
+ion-input {
+  color: #000000 !important;
+}
+
+/* Placeholder */
+ion-input::part(native)::placeholder {
+  color: #777 !important;
+  opacity: 1;
+}
+
+/* Label */
+ion-label {
+  color: #555 !important;
+}

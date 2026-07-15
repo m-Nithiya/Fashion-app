@@ -1,0 +1,52 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>Fashion Store</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+
+      <ion-list>
+
+        <ion-item routerLink="/home" routerDirection="forward">
+          <ion-icon name="home-outline" slot="start"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/fashion" [queryParams]="{ gender: 'women' }" routerDirection="forward">
+          <ion-icon name="woman-outline" slot="start"></ion-icon>
+          <ion-label>Women's Collection</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/fashion" [queryParams]="{ gender: 'men' }" routerDirection="forward">
+          <ion-icon name="man-outline" slot="start"></ion-icon>
+          <ion-label>Men's Collection</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/fashion" [queryParams]="{ gender: 'kids' }" routerDirection="forward">
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          <ion-label>Kids Collection</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/wishlist" routerDirection="forward">
+          <ion-icon name="heart-outline" slot="start"></ion-icon>
+          <ion-label>Wishlist</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/cart" routerDirection="forward">
+          <ion-icon name="cart-outline" slot="start"></ion-icon>
+          <ion-label>My Cart</ion-label>
+        </ion-item>
+
+      </ion-list>
+
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+</ion-app>

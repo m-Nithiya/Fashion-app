@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Fashion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="gender-banner women-banner" (click)="goToProducts('women')">
+    <div class="banner-text">
+      <h1 class="script-font">Women's</h1>
+      <h3>WEAR</h3>
+      <p>Dress like you're already the <b>Best Version of You</b></p>
+      <ion-button class="explore-btn">Explore Now ›</ion-button>
+    </div>
+    <img src="assets/images/women-card.jpg" class="banner-side-img" />
+  </div>
+
+  <div class="gender-banner men-banner" (click)="goToProducts('men')">
+    <div class="banner-text">
+      <h1 class="bold-font">Men's</h1>
+      <h3>WEAR</h3>
+      <p>Style is a way to say <b>WHO YOU ARE</b></p>
+      <ion-button class="explore-btn-men">Explore Now ›</ion-button>
+    </div>
+    <img src="assets/images/men-card.jpg" class="banner-side-img" />
+  </div>
+
+  <div class="gender-banner kids-banner" (click)="goToProducts('kids')">
+    <div class="banner-text">
+      <h1 class="kids-font">Kids'</h1>
+      <h3>WEAR</h3>
+      <p>Little Outfits, <b>Big Happiness</b></p>
+      <ion-button class="explore-btn-kids">Explore Now ›</ion-button>
+    </div>
+    <img src="assets/images/kids-card.jpg" class="banner-side-img" />
+  </div>
+
+</ion-content>

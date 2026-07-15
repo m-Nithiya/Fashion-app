@@ -1,0 +1,72 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="navbar">
+
+  
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    
+    <ion-title class="logo">
+      Fashion Store
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cart-outline"></ion-icon>
+        
+      </ion-button>
+
+      <ion-button id="profile-button" class="profile-btn">
+  <div class="profile-avatar">
+    {{ userInitial }}
+  </div>
+</ion-button>
+ <ion-popover
+    trigger="profile-button"
+    triggerAction="click"
+    class="profile-popover">
+
+    <ng-template>
+
+      <ion-content class="profile-content">
+
+
+  <div class="profile-header">
+    <div class="profile-circle">
+      {{ userInitial }}
+    </div>
+
+
+
+
+    <h2>{{ user.name }}</h2>
+    <p>{{ user.email }}</p>
+  </div>
+
+ 
+  <ion-list>
+    <ion-item button (click)="goToProfile()">
+       <ion-icon name="person-outline" slot="start"></ion-icon>
+       <ion-label>My Profile</ion-label>
+    </ion-item>
+
+    <ion-item button>
+      <ion-icon name="settings-outline" slot="start"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-item>
+
+    <ion-item button (click)="logout()">
+      <ion-icon name="log-out-outline" slot="start"></ion-icon>
+      <ion-label>Logout</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+        </ng-template>
+      </ion-popover>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>

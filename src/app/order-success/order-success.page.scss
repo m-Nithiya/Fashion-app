@@ -1,0 +1,35 @@
+.success-page {
+  --background: #fff4f8;
+}
+
+.success-box {
+  text-align: center;
+  margin-top: 120px;
+  padding: 20px;
+}
+
+.success-icon {
+  font-size: 90px;
+  color: green;
+}
+
+h2 {
+  color: #ff4081;
+  margin-top: 15px;
+}
+
+p {
+  color: gray;
+  margin-bottom: 30px;
+}
+.continue-btn {
+  --background: #ff4081;
+  --color: white;
+  --border-radius: 10px;
+
+  width: 220px !important;
+  height: 45px;
+
+  display: block;
+  margin: 25px auto;
+}

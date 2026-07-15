@@ -1,0 +1,91 @@
+<ion-content class="page-bg">
+<app-navbar></app-navbar>
+  <div class="page-container">
+
+<div class="banner-slider">
+  <img *ngFor="let banner of banners" [src]="banner" class="banner-img" />
+</div>
+    <ion-item class="search-box" lines="none">
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+
+      <ion-input
+        placeholder="Search products..."
+        [(ngModel)]="searchText"
+        (ionInput)="applyFilter()">
+      </ion-input>
+           <ion-icon name="camera-outline" slot="end" class="search-icon-end"></ion-icon>
+           <ion-icon name="mic-outline" slot="end" class="search-icon-end" (click)="goToCart()"></ion-icon>
+
+    </ion-item>
+
+    
+
+    <div class="category-filters">
+
+      <ion-chip [class.active]="selectedCategory==='all'" (click)="setCategory('all')">
+        All
+      </ion-chip>
+
+      <ion-chip [class.active]="selectedCategory==='men'" (click)="setCategory('men')">
+        Men
+      </ion-chip>
+
+      <ion-chip [class.active]="selectedCategory==='women'" (click)="setCategory('women')">
+        Women
+      </ion-chip>
+
+      <ion-chip [class.active]="selectedCategory==='kids'" (click)="setCategory('kids')">
+        Kids
+      </ion-chip>
+
+    </div>
+
+    <div class="price-filters">
+
+      <ion-chip [class.active]="selectedPrice===300" (click)="setPrice(300)">Under 250</ion-chip>
+      <ion-chip [class.active]="selectedPrice===500" (click)="setPrice(500)">Under 500</ion-chip>
+      <ion-chip [class.active]="selectedPrice===700" (click)="setPrice(700)">Under 700</ion-chip>
+      <ion-chip [class.active]="selectedPrice===1000" (click)="setPrice(1000)">Under 1000</ion-chip>
+      <ion-chip [class.active]="selectedPrice===1500" (click)="setPrice(1500)">Under 1500</ion-chip>
+      <ion-chip [class.active]="selectedPrice===2000" (click)="setPrice(2000)">Under 2000</ion-chip>
+
+    </div>
+
+<div class="products">
+
+  <ion-card *ngFor="let item of filteredProducts">
+    <img [src]="item.image" />
+
+    <ion-icon
+      [name]="item.isWishlisted ? 'heart' : 'heart-outline'"
+      class="wishlist-icon"
+      [class.active]="item.isWishlisted"
+      (click)="toggleWishlist(item)">
+    </ion-icon>
+
+    <ion-card-header>
+      <ion-card-title>{{ item.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p *ngIf="selectedCategory !== 'all'">₹{{ item.price }}</p>
+      <p>{{ item.category }}</p>
+
+      <div class="action-buttons" *ngIf="selectedCategory !== 'all'">
+        <ion-button class="cart-btn-outline" fill="outline" (click)="addToCart(item)">
+          <ion-icon name="cart-outline" slot="start"></ion-icon>
+          Add to Cart
+        </ion-button>
+
+        <ion-button class="buy-now-btn" fill="solid" (click)="buyNow(item)">
+          Buy Now
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</div>
+
+  </div>
+
+</ion-content>
